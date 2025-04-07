@@ -1,5 +1,6 @@
 # Based on https://github.com/CiscoDevNet/Type-6-Password-Encode/blob/main/encode6.py
 # Which was: "Copyright (c) 2018 Cisco Systems. All rights reserved."
+# EncryptECB requires .NET 6+.
 
 $TYPE6_SALT_LEN = 8
 $TYPE6_MAC_LEN = 4
