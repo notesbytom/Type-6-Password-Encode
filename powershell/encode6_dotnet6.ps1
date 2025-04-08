@@ -81,7 +81,7 @@ function password_mac_generate([Byte[]]$encrypted_key_bytes, $master_key <# str 
 }
 
 function transform_bytes($in_bytes, $salt_bytes, $key_str) {
-    $key_bytes = [Text.Encoding]::UTF8.GetBytes($master_key)
+    $key_bytes = [Text.Encoding]::UTF8.GetBytes($key_str)
     $aes = [Security.Cryptography.AES]::Create()
     $aes.KeySize = 128 
     $aes.Key = [Security.Cryptography.MD5]::Create().ComputeHash($key_bytes)
